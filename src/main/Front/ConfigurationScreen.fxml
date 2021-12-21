@@ -11,5 +11,7 @@
     <children>
         <ComboBox fx:id="difficulty_box" layoutX="350.0" layoutY="300.0" onAction="#setDifficulty_combo_box">
         </ComboBox>
+        <Text layoutX="350.0" layoutY="290.0" text="Choose Difficulty" textAlignment="CENTER">
+        </Text>
     </children>
 </AnchorPane>
