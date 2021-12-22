@@ -16,6 +16,6 @@ public class WelcomingScreenController {
     }
     @FXML
     protected void onExitButtonClick() {
-
+        Game.getInstance().exit();
     }
 }

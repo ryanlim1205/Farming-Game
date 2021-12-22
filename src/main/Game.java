@@ -6,13 +6,19 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import main.Entity.Difficulty;
+import main.Entity.Season;
+import main.Entity.Seed;
 
 public class Game {
 
     private static Stage primaryStage;
     private static Scene scene;
     private static Game instance;
+
     private static Difficulty diff;
+    private static Seed seed;
+    private static Season season;
+    private static String player_name;
 
     private static Pane playArea;
 
@@ -52,7 +58,6 @@ public class Game {
         }
         return parent;
     }
-
     /*
         Go to the welcoming screen of the Farming Game
      */
@@ -71,6 +76,13 @@ public class Game {
         primaryStage.show();
     }
     /*
+        Exit game: close the stage itself
+     */
+    public void exit() {
+        primaryStage.close();
+    }
+
+    /*
         Go to the initial configuration screen of the Farming Game
      */
     public void configScreen() {
@@ -85,8 +97,23 @@ public class Game {
         FROM HERE are the methods(mostly getters and setters) needed for the screens
      */
 
-
     public void setDifficulty(Difficulty diff) {
         this.diff = diff;
+    }
+
+    public void setSeed(Seed seed) {
+        this.seed = seed;
+    }
+
+    public void setSeason(Season season) {
+        this.season = season;
+    }
+
+    public void setName(String player_name) {
+        this.player_name = player_name;
+    }
+
+    public String getName() {
+        return player_name;
     }
 }
