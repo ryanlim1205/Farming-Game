@@ -2,7 +2,3 @@
     -fx-background-image: url("../Resources/The_Farm.png");
     -fx-background-size: 110%;
 }
-
-.button {
-    -fx-background-color: "white";
-}

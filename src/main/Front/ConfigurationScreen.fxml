@@ -24,7 +24,7 @@
         </ComboBox>
         <Text layoutX="350.0" layoutY="430.0" text="Which season do you want to play on?" textAlignment="CENTER">
         </Text>
-        <Button layoutX="350.0" layoutY="500.0" text="PLAY GAME" textAlignment="CENTER">
+        <Button fx:id="play_game_button" layoutX="350.0" layoutY="500.0" text="PLAY GAME" textAlignment="CENTER" onAction="#onClickPlayGameButton">
             <font>
                 <Font name="Bodoni MT Bold" size="18.0"/>
             </font>

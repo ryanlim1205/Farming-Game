@@ -4,10 +4,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
+import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import main.Entity.Difficulty;
 import main.Entity.Season;
 import main.Entity.Seed;
+
+import main.Controllers.FarmUIController;
 
 public class Game {
 
@@ -20,6 +23,10 @@ public class Game {
     private static Season season;
     private static String player_name;
 
+    private static int money;
+
+
+    // only for options
     private static Pane playArea;
 
     /*
@@ -92,6 +99,13 @@ public class Game {
         primaryStage.show();
     }
 
+    public void FarmUI() {
+        Scene scene = new Scene(fxmlLoad("Front/FarmUI.fxml"));
+
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
 
     /*
         FROM HERE are the methods(mostly getters and setters) needed for the screens
@@ -101,19 +115,52 @@ public class Game {
         this.diff = diff;
     }
 
+    public Difficulty getDifficulty() {
+        return diff;
+    }
+
     public void setSeed(Seed seed) {
         this.seed = seed;
+    }
+
+    public Seed getSeed() {
+        return seed;
     }
 
     public void setSeason(Season season) {
         this.season = season;
     }
 
+    public Season getSeason() {
+        return season;
+    }
+
     public void setName(String player_name) {
         this.player_name = player_name;
     }
 
-    public String getName() {
+    public static String getName() {
         return player_name;
+    }
+
+
+    /*
+        Methods for the initial game values - starting money based on difficulty and the date
+     */
+
+    public static int giveStartingDate() {
+        return 1;
+    }
+
+    public static int giveStartingMoney() {
+        int cash = 0;
+        if (diff == Difficulty.EASY) {
+            cash = 1000;
+        } else if (diff == Difficulty.MEDIUM) {
+            cash = 700;
+        } else {
+            cash = 500;
+        }
+        return cash;
     }
 }

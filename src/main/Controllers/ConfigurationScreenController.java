@@ -17,7 +17,9 @@ public class ConfigurationScreenController {
     @FXML
     private ComboBox<String> season_box;
     @FXML
-    private TextField name_of_player;
+    private TextField player_name;
+    @FXML
+    private Button play_game_button;
 
     // Initialize method is needed -> when the game restarts, when the player comes back to this screen
     @FXML
@@ -32,11 +34,11 @@ public class ConfigurationScreenController {
         seed_box.getItems().addAll("Watermelon", "Orange", "Peach");
         seed_box.getSelectionModel().selectFirst();         // for default, just display the first choice (Watermelon)
         setSeed_combo_box();
-        // Rest then add all season enums
+        // Reset then add all season enums
         season_box.getItems().clear();
         season_box.getItems().addAll("Spring", "Summer", "Fall", "Winter");
         season_box.getSelectionModel().selectFirst();         // for default, just display the first choice (Spring)
-        setSeed_combo_box();
+        setSeason_combo_box();
     }
 
     // Using switch-case to cover all drop-down buttons - choosing difficulty, seed, and season.
@@ -84,12 +86,13 @@ public class ConfigurationScreenController {
                 break;
             case "Winter" :
                 Game.getInstance().setSeason(Season.Winter);
+                break;
             default:
         }
     }
     @FXML
     protected void setName_text_field() {
-        Game.getInstance().setName(name_of_player.getText());
+        Game.getInstance().setName(player_name.getText());
     }
 
     private boolean name_check() {
@@ -104,6 +107,10 @@ public class ConfigurationScreenController {
         return true;
     }
 
-
-
+    @FXML
+    protected void onClickPlayGameButton() throws InterruptedException {
+        if (name_check()) {
+            Game.getInstance().FarmUI();
+        }
+    }
 }
