@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0"
+            xmlns:fx="http://javafx.com/fxml" fx:controller="main.Controllers.FarmUIController">
+    <children>
+        <Label fx:id="name" layoutX="750.0" layoutY="10.0"/>
+        <Label fx:id="current_date" layoutX="750.0" layoutY="30.0"/>
+        <Label fx:id="current_money" layoutX="750.0" layoutY="50.0"/>
+        <Label fx:id="current_season" layoutX="750.0" layoutY="70.0"/>
+        <Label fx:id="seed" layoutX="750.0" layoutY="90.0"/>
+
+        <Button fx:id="Plot_1" text="Plot 1" layoutX="225.0" layoutY="500.0" prefWidth="150" prefHeight="150"/>
+        <Button fx:id="Plot_2" text="Plot 2" layoutX="375.0" layoutY="500.0" prefWidth="150" prefHeight="150"/>
+        <Button fx:id="Plot_3" text="Plot 3" layoutX="525.0" layoutY="500.0" prefWidth="150" prefHeight="150"/>
+        <Button fx:id="Plot_4" text="Plot 4" layoutX="225.0" layoutY="350.0" prefWidth="150" prefHeight="150"/>
+        <Button fx:id="Plot_5" text="Plot 5" layoutX="375.0" layoutY="350.0" prefWidth="150" prefHeight="150"/>
+        <Button fx:id="Plot_6" text="Plot 6" layoutX="525.0" layoutY="350.0" prefWidth="150" prefHeight="150"/>
+        <Button fx:id="Plot_7" text="Plot 7" layoutX="225.0" layoutY="200.0" prefWidth="150" prefHeight="150"/>
+        <Button fx:id="Plot_8" text="Plot 8" layoutX="375.0" layoutY="200.0" prefWidth="150" prefHeight="150"/>
+        <Button fx:id="Plot_9" text="Plot 9" layoutX="525.0" layoutY="200.0" prefWidth="150" prefHeight="150"/>
+    </children>
+
+</AnchorPane>
