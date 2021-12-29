@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0"
+            xmlns:fx="http://javafx.com/fxml" fx:controller="main.Controllers.InventoryScreenController">
+    <children>
+        <Label fx:id="orange_seeds" layoutX="300.0" layoutY="300.0"/>
+        <Label fx:id="watermelon_seeds" layoutX="300.0" layoutY="320.0"/>
+        <Label fx:id="peach_seeds" layoutX="300.0" layoutY="340.0"/>
+    </children>
+
+    <Button fx:id="farmUI" layoutX="10.0" layoutY="10.0" text="BACK TO FARM" textAlignment="CENTER" onAction="#onClickFarmButton"/>
+</AnchorPane>

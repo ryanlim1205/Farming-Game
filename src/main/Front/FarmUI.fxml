@@ -6,6 +6,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="600.0" prefWidth="900.0"
             xmlns:fx="http://javafx.com/fxml" fx:controller="main.Controllers.FarmUIController">
@@ -25,6 +26,9 @@
         <Button fx:id="Plot_7" text="Plot 7" layoutX="225.0" layoutY="200.0" prefWidth="150" prefHeight="150"/>
         <Button fx:id="Plot_8" text="Plot 8" layoutX="375.0" layoutY="200.0" prefWidth="150" prefHeight="150"/>
         <Button fx:id="Plot_9" text="Plot 9" layoutX="525.0" layoutY="200.0" prefWidth="150" prefHeight="150"/>
+
+        <Button fx:id="inventory" layoutX="10.0" layoutY="10.0" text="INVENTORY" textAlignment="CENTER" onAction="#onClickInventoryButton">
+        </Button>
     </children>
 
 </AnchorPane>

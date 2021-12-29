@@ -24,6 +24,9 @@ public class Game {
     private static String player_name;
 
     private static int money;
+    private static int amount_of_orange_seed;
+    private static int amount_of_watermelon_seed;
+    private static int amount_of_peach_seed;
 
 
     // only for options
@@ -106,6 +109,13 @@ public class Game {
         primaryStage.show();
     }
 
+    public void inventoryScreen() {
+        Scene scene = new Scene(fxmlLoad("Front/InventoryScreen.fxml"));
+
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
 
     /*
         FROM HERE are the methods(mostly getters and setters) needed for the screens
@@ -143,7 +153,6 @@ public class Game {
         return player_name;
     }
 
-
     /*
         Methods for the initial game values - starting money based on difficulty and the date
      */
@@ -153,14 +162,58 @@ public class Game {
     }
 
     public static int giveStartingMoney() {
-        int cash = 0;
         if (diff == Difficulty.EASY) {
-            cash = 1000;
+            money = 1000;
         } else if (diff == Difficulty.MEDIUM) {
-            cash = 700;
+            money = 700;
         } else {
-            cash = 500;
+            money = 500;
         }
-        return cash;
+        return money;
     }
+
+    public static int get_currentMoney() {
+        return money;
+    }
+
+    public void set_StartingSeed() {
+        if (diff == Difficulty.EASY) {
+            if (seed == Seed.Orange) {
+                amount_of_orange_seed = 10;
+            } else if (seed == Seed.Peach) {
+                amount_of_peach_seed = 10;
+            } else {
+                amount_of_watermelon_seed = 10;
+            }
+        } else if (diff == Difficulty.MEDIUM) {
+            if (seed == Seed.Orange) {
+                amount_of_orange_seed = 7;
+            } else if (seed == Seed.Peach) {
+                amount_of_peach_seed = 7;
+            } else {
+                amount_of_watermelon_seed = 7;
+            }
+        } else {
+            if (seed == Seed.Orange) {
+                amount_of_orange_seed = 5;
+            } else if (seed == Seed.Peach) {
+                amount_of_peach_seed = 5;
+            } else {
+                amount_of_watermelon_seed = 5;
+            }
+        }
+    }
+
+    public static int getAmount_of_orange_seed() {
+        return amount_of_orange_seed;
+    }
+
+    public static int getAmount_of_watermelon_seed_seed() {
+        return amount_of_watermelon_seed;
+    }
+
+    public static int getAmount_of_peach_seed() {
+        return amount_of_peach_seed;
+    }
+
 }

@@ -10,8 +10,6 @@ import main.Entity.Player;
 
 public class FarmUIController {
 
-    private Player player;
-
     @FXML
     private Label name;
     @FXML
@@ -22,6 +20,8 @@ public class FarmUIController {
     private Label current_season;
     @FXML
     private Label seed;
+    @FXML
+    private Button inventory;
 
     @FXML
     private Button plot_1;
@@ -34,4 +34,10 @@ public class FarmUIController {
         current_season.setText("Season: " + Game.getInstance().getSeason());
         seed.setText("Seed: " + Game.getInstance().getSeed());
     }
+
+    @FXML
+    protected void onClickInventoryButton() throws InterruptedException {
+        Game.getInstance().inventoryScreen();
+    }
+
 }
