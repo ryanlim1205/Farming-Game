@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0"
+            xmlns:fx="http://javafx.com/fxml" fx:controller="main.Controllers.MarketScreenController">
+    <children>
+
+        <Label fx:id="orange_seeds" layoutX="300.0" layoutY="300.0"/>
+        <Label fx:id="watermelon_seeds" layoutX="300.0" layoutY="320.0"/>
+        <Label fx:id="peach_seeds" layoutX="300.0" layoutY="340.0"/>
+
+        <TextField fx:id="number_of_seeds" layoutX="200.0" layoutY="300.0" onKeyReleased="#set_number_of_seeds_purchase">
+        </TextField>
+
+        <Button fx:id="puchase" layoutX="200.0" layoutY="400.0"  text="PURCHASE" onAction="#purchase_orange_seeds">
+        </Button>
+
+    </children>
+</AnchorPane>

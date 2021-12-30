@@ -6,7 +6,6 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import main.Game;
-import main.Entity.Player;
 
 public class FarmUIController {
 
@@ -30,7 +29,7 @@ public class FarmUIController {
     protected void initialize() {
         name.setText("Name: " + Game.getInstance().getName());
         current_date.setText("Day: " + Game.getInstance().giveStartingDate());
-        current_money.setText("Cash: " + Game.getInstance().giveStartingMoney());
+        current_money.setText("Cash: " + Game.getInstance().get_currentMoney());
         current_season.setText("Season: " + Game.getInstance().getSeason());
         seed.setText("Seed: " + Game.getInstance().getSeed());
     }
@@ -40,4 +39,8 @@ public class FarmUIController {
         Game.getInstance().inventoryScreen();
     }
 
+    @FXML
+    protected void onClickMarketButton() throws InterruptedException {
+        Game.getInstance().marketScreen();
+    }
 }

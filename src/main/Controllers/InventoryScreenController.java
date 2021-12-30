@@ -23,7 +23,6 @@ public class InventoryScreenController {
     // Initializing the starting number of seeds
     @FXML
     public void initialize() {
-        Game.getInstance().set_StartingSeed();
         orange_seeds.setText("Orange Seeds: " + Game.getInstance().getAmount_of_orange_seed());
         peach_seeds.setText("Peach Seeds: " + Game.getInstance().getAmount_of_peach_seed());
         watermelon_seeds.setText("Watermelon Seeds: " + Game.getInstance().getAmount_of_watermelon_seed_seed());

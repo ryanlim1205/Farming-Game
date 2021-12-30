@@ -47,12 +47,15 @@ public class ConfigurationScreenController {
         switch (difficulty_box.getValue()) {
             case "Easy" :
                 Game.getInstance().setDifficulty(Difficulty.EASY);
+                Game.getInstance().set_StartingMoney();
                 break;
             case "Medium" :
                 Game.getInstance().setDifficulty(Difficulty.MEDIUM);
+                Game.getInstance().set_StartingMoney();
                 break;
             case "Hard" :
                 Game.getInstance().setDifficulty(Difficulty.HARD);
+                Game.getInstance().set_StartingMoney();
                 break;
             default:
         }
@@ -62,12 +65,15 @@ public class ConfigurationScreenController {
         switch (seed_box.getValue()) {
             case "Watermelon" :
                 Game.getInstance().setSeed(Seed.Watermelon);
+                Game.getInstance().set_StartingSeed();
                 break;
             case "Orange" :
                 Game.getInstance().setSeed(Seed.Orange);
+                Game.getInstance().set_StartingSeed();
                 break;
             case "Peach" :
                 Game.getInstance().setSeed(Seed.Peach);
+                Game.getInstance().set_StartingSeed();
                 break;
             default:
         }

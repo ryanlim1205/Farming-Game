@@ -24,9 +24,12 @@ public class Game {
     private static String player_name;
 
     private static int money;
+    // private static int current_money;
     private static int amount_of_orange_seed;
     private static int amount_of_watermelon_seed;
     private static int amount_of_peach_seed;
+
+    private static int amount_of_seeds_purchase;
 
 
     // only for options
@@ -116,6 +119,13 @@ public class Game {
         primaryStage.show();
     }
 
+    public void marketScreen() {
+        Scene scene = new Scene(fxmlLoad("Front/MarketScreen.fxml"));
+
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+
 
     /*
         FROM HERE are the methods(mostly getters and setters) needed for the screens
@@ -161,7 +171,7 @@ public class Game {
         return 1;
     }
 
-    public static int giveStartingMoney() {
+    public void set_StartingMoney() {
         if (diff == Difficulty.EASY) {
             money = 1000;
         } else if (diff == Difficulty.MEDIUM) {
@@ -169,7 +179,10 @@ public class Game {
         } else {
             money = 500;
         }
-        return money;
+    }
+
+    public void set_currentMoney(int money) {
+        this.money = money;
     }
 
     public static int get_currentMoney() {
@@ -180,28 +193,50 @@ public class Game {
         if (diff == Difficulty.EASY) {
             if (seed == Seed.Orange) {
                 amount_of_orange_seed = 10;
+                amount_of_peach_seed = 0;
+                amount_of_watermelon_seed = 0;
             } else if (seed == Seed.Peach) {
                 amount_of_peach_seed = 10;
-            } else {
+                amount_of_orange_seed = 0;
+                amount_of_watermelon_seed = 0;
+            } else if (seed == Seed.Watermelon) {
                 amount_of_watermelon_seed = 10;
+                amount_of_orange_seed = 0;
+                amount_of_peach_seed = 0;
             }
         } else if (diff == Difficulty.MEDIUM) {
             if (seed == Seed.Orange) {
                 amount_of_orange_seed = 7;
+                amount_of_peach_seed = 0;
+                amount_of_watermelon_seed = 0;
             } else if (seed == Seed.Peach) {
                 amount_of_peach_seed = 7;
-            } else {
+                amount_of_orange_seed = 0;
+                amount_of_watermelon_seed = 0;
+            } else if (seed == Seed.Watermelon) {
                 amount_of_watermelon_seed = 7;
+                amount_of_orange_seed = 0;
+                amount_of_peach_seed = 0;
             }
         } else {
             if (seed == Seed.Orange) {
                 amount_of_orange_seed = 5;
+                amount_of_peach_seed = 0;
+                amount_of_watermelon_seed = 0;
             } else if (seed == Seed.Peach) {
                 amount_of_peach_seed = 5;
-            } else {
+                amount_of_orange_seed = 0;
+                amount_of_watermelon_seed = 0;
+            } else if (seed == Seed.Watermelon) {
                 amount_of_watermelon_seed = 5;
+                amount_of_orange_seed = 0;
+                amount_of_peach_seed = 0;
             }
         }
+    }
+
+    public void setAmount_of_orange_seed(int amount_of_orange_seed) {
+        this.amount_of_orange_seed = amount_of_orange_seed;
     }
 
     public static int getAmount_of_orange_seed() {
@@ -216,4 +251,12 @@ public class Game {
         return amount_of_peach_seed;
     }
 
+
+    public void set_purchased_seeds_number(int amount_of_seeds_purchase) {
+        this.amount_of_seeds_purchase = amount_of_seeds_purchase;
+    }
+
+    public int get_purchased_seeds_number() {
+        return amount_of_seeds_purchase;
+    }
 }
