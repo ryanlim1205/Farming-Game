@@ -14,11 +14,11 @@
         <Label fx:id="watermelon_seeds" layoutX="300.0" layoutY="320.0"/>
         <Label fx:id="peach_seeds" layoutX="300.0" layoutY="340.0"/>
 
-        <TextField fx:id="number_of_seeds" layoutX="200.0" layoutY="300.0" onKeyReleased="#set_number_of_seeds_purchase">
-        </TextField>
+        <ComboBox fx:id="seed_box" layoutX="300.0" layoutY="200.0" onAction="#choose_which_seed_purchase"/>
 
-        <Button fx:id="puchase" layoutX="200.0" layoutY="400.0"  text="PURCHASE" onAction="#purchase_orange_seeds">
-        </Button>
+        <TextField fx:id="number_of_seeds" layoutX="200.0" layoutY="300.0" onKeyReleased="#set_number_of_seeds_purchase"/>
+
+        <Button fx:id="puchase" layoutX="200.0" layoutY="400.0"  text="PURCHASE" onAction="#purchase_seeds"/>
 
     </children>
 </AnchorPane>

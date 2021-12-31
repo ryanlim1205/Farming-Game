@@ -239,11 +239,19 @@ public class Game {
         this.amount_of_orange_seed = amount_of_orange_seed;
     }
 
+    public void setAmount_of_peach_seed(int amount_of_peach_seed) {
+        this.amount_of_peach_seed = amount_of_peach_seed;
+    }
+
+    public void setAmount_of_watermelon_seed(int amount_of_watermelon_seed) {
+        this.amount_of_watermelon_seed = amount_of_watermelon_seed;
+    }
+
     public static int getAmount_of_orange_seed() {
         return amount_of_orange_seed;
     }
 
-    public static int getAmount_of_watermelon_seed_seed() {
+    public static int getAmount_of_watermelon_seed() {
         return amount_of_watermelon_seed;
     }
 

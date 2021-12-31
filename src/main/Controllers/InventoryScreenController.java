@@ -25,13 +25,13 @@ public class InventoryScreenController {
     public void initialize() {
         orange_seeds.setText("Orange Seeds: " + Game.getInstance().getAmount_of_orange_seed());
         peach_seeds.setText("Peach Seeds: " + Game.getInstance().getAmount_of_peach_seed());
-        watermelon_seeds.setText("Watermelon Seeds: " + Game.getInstance().getAmount_of_watermelon_seed_seed());
+        watermelon_seeds.setText("Watermelon Seeds: " + Game.getInstance().getAmount_of_watermelon_seed());
     }
 
     // Check whether the total number of seeds exceeds the inventory's seed capacity
     public boolean seed_capacity_check() {
         if (Game.getInstance().getAmount_of_orange_seed() + Game.getInstance().getAmount_of_peach_seed()
-                + Game.getInstance().getAmount_of_watermelon_seed_seed() > seed_capacity) {
+                + Game.getInstance().getAmount_of_watermelon_seed() > seed_capacity) {
             return false;
         }
         return true;

@@ -31,7 +31,7 @@ public class FarmUIController {
         current_date.setText("Day: " + Game.getInstance().giveStartingDate());
         current_money.setText("Cash: " + Game.getInstance().get_currentMoney());
         current_season.setText("Season: " + Game.getInstance().getSeason());
-        seed.setText("Seed: " + Game.getInstance().getSeed());
+        // seed.setText("Seed: " + Game.getInstance().getSeed());
     }
 
     @FXML

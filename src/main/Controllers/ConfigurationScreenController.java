@@ -65,15 +65,12 @@ public class ConfigurationScreenController {
         switch (seed_box.getValue()) {
             case "Watermelon" :
                 Game.getInstance().setSeed(Seed.Watermelon);
-                Game.getInstance().set_StartingSeed();
                 break;
             case "Orange" :
                 Game.getInstance().setSeed(Seed.Orange);
-                Game.getInstance().set_StartingSeed();
                 break;
             case "Peach" :
                 Game.getInstance().setSeed(Seed.Peach);
-                Game.getInstance().set_StartingSeed();
                 break;
             default:
         }
@@ -115,6 +112,9 @@ public class ConfigurationScreenController {
 
     @FXML
     protected void onClickPlayGameButton() throws InterruptedException {
+        // Set_StartingSeed needs to be here because of the order of selecting ComboBoxes
+        // Before: selecting seed before difficulty and selecting difficulty before seed were different
+        Game.getInstance().set_StartingSeed();
         if (name_check()) {
             Game.getInstance().FarmUI();
         }
